@@ -324,7 +324,7 @@ input[type=email]:focus {
 // ====== NASTAVENIA ======
 const CONFIG = {
   FORM_ENDPOINT: "https://formspree.io/f/xnpjyzkp", // Napr. Formspree / Make / Vlastné API
-  PAYMENT_URL: "https://revolut.me/p_bielcik/1EUR"    // Napr. Stripe Payment Link: https://buy.stripe.com/...
+  PAYMENT_URL: "https://buy.stripe.com/fZu7sKb6w2Ccc2o6JC9oc00"    // Napr. Stripe Payment Link: https://buy.stripe.com/...
 };
 
 const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 9.5"/></svg>';
@@ -444,7 +444,7 @@ $("form-email").addEventListener("submit", async e => {
 $("btn-pay").addEventListener("click", () => {
   if(CONFIG.PAYMENT_URL){
     const u = new URL(CONFIG.PAYMENT_URL);
-    u.searchParams.set("prefilled_email", email);
+    if(email) u.searchParams.set("prefilled_email", email);
     u.searchParams.set("client_reference_id", key);
     location.href = u.toString();
     return;
