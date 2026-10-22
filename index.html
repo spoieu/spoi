@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SPOI – Získaj prednostný prístup za 1 €</title>
-<meta name="description" content="SPOI validuje dopyt po nových regionálnych projektoch. Zaregistruj sa, získaj prednostný prístup a ak projekt nenaštartuje do 7 dní, garantujeme 100% vrátenie 1 €.">
+<meta name="description" content="Buď medzi prvými, ktorí dostanú SPOI. Zaregistruj sa a ak projekt nenaštartuje, vrátime ti 1 € v plnej výške.">
 <meta name="theme-color" content="#0A0C10">
 <meta property="og:title" content="SPOI – Prednostný prístup za 1 €">
-<meta property="og:description" content="Získať miesto medzi prvými zakladajúcimi členmi. Ak projekt nenaštartuje, vrátime ti 1 €.">
+<meta property="og:description" content="Buď medzi prvými zakladajúcimi členmi. Ak projekt nenaštartuje, vrátime ti 1 € v plnej výške.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -267,7 +267,7 @@ input[type=email]:focus {
     <p class="lead" id="lead-email"></p>
     <ul class="perks" id="perks"></ul>
     
-    <p class="cta-email">Zanechaj nám svoj e-mail a zabezpeč si prednostný prístup k prvej verzii projektu hneď po jeho spustení.</p>
+    <p class="cta-email">Zadaj e-mail a zaraď sa medzi prvých, ktorí dostanú prístup k prvej verzii hneď po spustení projektu.</p>
     
     <form id="form-email" novalidate>
       <label class="sr" for="email">E-mailová adresa</label>
@@ -277,40 +277,40 @@ input[type=email]:focus {
         <span>Súhlasím so spracovaním e-mailu na účely informovania o projekte. Odhlásiť sa môžem kedykoľvek. <a href="/ochrana-udajov" target="_blank" rel="noopener">Ochrana údajov</a></span>
       </label>
       <p class="err" id="err" role="alert"></p>
-      <button class="btn" type="submit" id="btn-email">Získať prednostný prístup →</button>
+      <button class="btn" type="submit" id="btn-email">Chcem prednostný prístup →</button>
     </form>
-    <p class="micro">Registrácia trvá 30 sekúnd. Žiadny spam.</p>
-    <div class="foot"><button type="button" data-go="view-about">Čo je projekt SPOI a v akej je fáze?</button></div>
+    <p class="micro">Zaberie to 30 sekúnd. Žiadny spam, len správa o štarte.</p>
+    <div class="foot"><button type="button" data-go="view-about">Čo je SPOI a v akej fáze projekt je?</button></div>
   </section>
 
   <!-- 2: PLATBA -->
   <section id="view-payment" class="view" aria-labelledby="h-pay">
     <div class="top"><span class="brand">SPOI<b>.</b></span><span class="pill" id="pill-pay"></span></div>
     <div class="steps" aria-hidden="true"><i class="on"></i><i class="on"></i></div>
-    <h1 id="h-pay">Potvrď svoje miesto vo VIP klube</h1>
-    <p class="lead">Symbolický poplatok <strong>1 €</strong> filtruje spam a zaisťuje ti garantované miesto medzi prvými zakladajúcimi členmi.</p>
+    <h1 id="h-pay">Zaisti si miesto medzi zakladajúcimi členmi</h1>
+    <p class="lead">Za <strong>1 €</strong> si rezervuješ svoje miesto a zároveň nám ukážeš, že o projekt je reálny záujem. Ak nenaštartuje, peniaze ti vrátime.</p>
     <div class="price"><b>1 €</b><span>jednorazovo · bez skrytých poplatkov</span></div>
     <div class="guarantee">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
-      <span><strong>100% Garancia vrátenia platby.</strong> Ak projekt nenaštartuje do 7 dní od uzavretia registrácie, 1 € ti automaticky vrátime na tvoj účet.</span>
+      <span><strong>Nič neriskuješ: 100 % vrátenie platby.</strong> Ak projekt nenaštartuje do 7 dní od uzavretia registrácie, 1 € ti automaticky vrátime na tvoj účet.</span>
     </div>
-    <button class="btn" id="btn-pay" type="button">Aktivovať prístup za 1 €</button>
-    <p class="micro">Zabezpečená platba cez šifrovanú platobnú bránu.</p>
-    <div class="foot"><button type="button" data-go="view-about">Viac informácií o projekte</button></div>
+    <button class="btn" id="btn-pay" type="button">Rezervovať miesto za 1 €</button>
+    <p class="micro">Bezpečná platba cez šifrovanú platobnú bránu.</p>
+    <div class="foot"><button type="button" data-go="view-about">Chcem sa dozvedieť viac o projekte</button></div>
   </section>
 
   <!-- 3: POĎAKOVANIE -->
   <section id="view-thanks" class="view" aria-labelledby="h-thanks" aria-live="polite">
     <div class="done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
-    <h1 id="h-thanks">Si v klube. Ďakujeme!</h1>
-    <p class="lead">Potvrdenie a inštrukcie sme poslali na <strong id="who">tvoj e-mail</strong>.</p>
+    <h1 id="h-thanks">Vitaj v klube. Miesto je tvoje!</h1>
+    <p class="lead">Potvrdenie a ďalšie kroky sme ti poslali na <strong id="who">tvoj e-mail</strong>.</p>
     <ol class="next">
-      <li>Skontroluj e-mailovú schránku (vrátane zložky SPAM). Potvrdenie dorazí do niekoľkých minút.</li>
-      <li>Získaš exkluzívne informácie o štarte projektu ako prvý.</li>
-      <li>Ak projekt nenaštartuje do 7 dní od uzavretia fázy, 1 € ti automaticky vrátime.</li>
+      <li>Pozri si schránku (aj zložku SPAM). Potvrdenie príde do pár minút.</li>
+      <li>Ako jeden z prvých sa dozvieš, kedy projekt štartuje.</li>
+      <li>Ak projekt nenaštartuje do 7 dní od uzavretia registrácie, 1 € ti automaticky vrátime.</li>
     </ol>
     <button class="btn" id="btn-share" type="button">Pozvať priateľa</button>
-    <p class="micro" id="share-msg">Čím rýchlejšie naplníme kapacitu, tým skôr projekt spustíme.</p>
+    <p class="micro" id="share-msg">Čím skôr sa naplní kapacita, tým skôr projekt spustíme.</p>
     <div class="foot"><button type="button" data-go="view-about">Zobraziť detaily o projekte</button></div>
   </section>
 
@@ -319,8 +319,8 @@ input[type=email]:focus {
     <div class="top"><span class="brand">SPOI<b>.</b></span><span class="pill" id="pill-about"></span></div>
     <h1 id="h-about"></h1>
     <p id="about-text"></p>
-    <div class="status">📌 <strong>Transparentne:</strong> Sme vo fáze overovania trhového dopytu. Ak projekt v regióne nezíska dostatočnú podporu, nenaštartujeme ho a všetky zaplatené poplatky (1 €) vrátime v plnej výške.</div>
-    <button class="btn ghost" type="button" id="btn-back">← Späť na formulár</button>
+    <div class="status">📌 <strong>Na rovinu:</strong> SPOI je zatiaľ vo fáze overovania záujmu. Nechceme stavať naslepo, preto sa najprv pýtame teba. Ak projekt v regióne nezíska dostatočnú podporu, nenaštartuje a každý zaplatený 1 € vrátime v plnej výške.</div>
+    <button class="btn ghost" type="button" id="btn-back">← Späť na registráciu</button>
   </section>
 
 </main>
@@ -338,62 +338,62 @@ const sections = {
   spajanie: {
     name: "Spájanie",
     color: "#FF6B6B",
-    title: "Menej času na mobile. Viac zážitkov naživo.",
-    lead: "Turistika, jóga, fitko, káva alebo prechádzka — nie vždy máš s kým vyraziť. My spájame ľudí cez spoločné aktivity.",
+    title: "Máš chuť vyraziť, no nemáš s kým?",
+    lead: "Turistika, jóga, fitko, káva či obyčajná prechádzka. Všetko je lepšie v dobrej partii. SPOI ťa spojí s ľuďmi z tvojho okolia, ktorí chcú robiť presne to, čo ty.",
     perks: [
-      "Nemusíš týždne plánovať spoločný termín, nájdeš niekoho s podobným plánom.",
-      "Od fitka a behu až po kávu či obyčajnú prechádzku.",
-      "Aj spontánne plány majú šancu a prirodzene sa zoznámiš."
+      "Žiadne týždne ladenia termínov. Nájdeš niekoho s rovnakým plánom.",
+      "Od behu a fitka až po kávu alebo prechádzku.",
+      "Aj spontánny nápad sa môže zmeniť na plán a nových ľudí spoznáš úplne prirodzene."
     ],
-    about: "SPOI Spájanie je platforma, pri ktorej aktuálne overujeme dopyt po novom spôsobe hľadania parťákov na voľný čas. Naším cieľom je prepojiť ľudí cez spoločné aktivity, pretože nekonečné dopisovanie často nevedie k reálnym stretnutiam a je ťažké si spontánne dohodnúť program. Validujeme záujem o službu, kde si jednoducho vyberiete, čo chcete robiť, kedy máte čas, a bez zložitého plánovania nájdete ľudí v okolí."
+    about: "SPOI Spájanie má pomôcť nájsť parťákov na voľný čas, na túru, tréning, kávu či prechádzku. Nekonečné dopisovanie málokedy skončí skutočným stretnutím a spontánny program sa dohodnúť len ťažko. Preto zisťujeme, či by ti pomohla služba, kde jednoducho vyberieš, čo chceš robiť a kedy máš čas, a my ti pomôžeme nájsť ľudí v okolí. Tvoj záujem nám ukáže, či má zmysel ju postaviť."
   },
   kyberbezpecnost: {
     name: "Kyberbezpečnosť",
     color: "#00E676",
-    title: "Podvody sú čoraz presvedčivejšie. Ste pripravení ich odhaliť?",
-    lead: "Podvodné správy či krádež hesiel môžu ohroziť každého. Vaše peniaze, údaje a súkromie si zaslúžia ochranu.",
+    title: "Podvodné správy vyzerajú čoraz uveriteľnejšie. Spoznáš ich včas?",
+    lead: "Stačí jedno kliknutie na falošný odkaz a môžeš prísť o peniaze či heslá. Ochranu si zaslúži každý, nielen technici.",
     perks: [
-      "Včas rozpoznáte digitálne hrozby a upozorníme vás na podozrivé správy.",
-      "Ochránite svoje peniaze, heslá a osobné údaje pred zneužitím.",
-      "Budete používať technológie bezpečnejšie aj bez potreby technických znalostí."
+      "Podozrivé správy a hrozby rozpoznáš skôr, než ti uškodia.",
+      "Svoje peniaze, heslá a osobné údaje ochrániš pred zneužitím.",
+      "Online sa budeš cítiť bezpečnejšie, aj bez technických znalostí."
     ],
-    about: "V projekte SPOI Kyberbezpečnosť overujeme dopyt po inteligentnom a dostupnom riešení na ochranu v online priestore. Cieľom je vytvoriť nástroj, ktorý vás včas upozorní na podozrivé správy a hrozby, pretože pre bežného človeka je dnes veľmi náročné rozoznať sofistikované podvody. Testujeme, či majú ľudia a firmy záujem chrániť svoje súkromie a údaje bez toho, aby museli riešiť zbytočné technické komplikácie."
+    about: "SPOI Kyberbezpečnosť má byť jednoduchý a dostupný nástroj, ktorý ťa včas upozorní na podozrivé správy a online hrozby. Dnešné podvody sú také vyladené, že ich bežný človek len ťažko odhalí. Zisťujeme, či o takúto ochranu stoja ľudia aj firmy, a to bez zbytočných technických komplikácií. Tvoj záujem nám pomôže rozhodnúť, či ju spustíme."
   },
   biznis: {
     name: "Biznis",
     color: "#3B82F6",
-    title: "Fungujú Vaše procesy tak, ako by ste si predstavovali?",
-    lead: "Možno nepotrebujete pracovať viac, ale potrebujete, aby niektoré veci fungovali lepšie. Vyvíjame riešenia pre váš rast.",
+    title: "Tvoja firma môže rásť aj bez toho, aby ťa to stálo viac práce.",
+    lead: "Často nejde o to pracovať viac, ale o to, aby rutinné veci fungovali samé. Pripravujeme digitálne riešenia, ktoré ti uvoľnia ruky pre rast.",
     perks: [
-      "Menej manuálnej práce a efektívnejšia prevádzka pripravená na rast.",
-      "Automatizácia procesov, ktorá vám prinesie viac získaných zákazníkov.",
-      "Rýchlejšie a presnejšie rozhodnutia vďaka digitálnym riešeniam."
+      "Menej manuálnej práce a plynulejšia prevádzka pripravená na rast.",
+      "Automatizácia procesov, ktorá ti pomôže získať viac zákazníkov.",
+      "Rozhoduj rýchlejšie a presnejšie, na základe dát a nie odhadov."
     ],
-    about: "SPOI Biznis slúži na overenie trhového dopytu po digitálnych riešeniach a automatizácii pre menšie i väčšie firmy. Cieľom je pomáhať firmám rásť bez zbytočných nákladov, zrýchľovať predaj a zlepšovať rozhodovanie, keďže množstvo zbytočnej manuálnej práce často brzdí ich skutočný potenciál. Momentálne validujeme, či podnikatelia ocenia nástroje, ktoré automatizujú rutinnú prácu a ušetria im drahocenný čas."
+    about: "SPOI Biznis má pomáhať menším aj väčším firmám rásť bez zbytočných nákladov: zrýchliť predaj, zlepšiť rozhodovanie a zbaviť sa rutiny, ktorá brzdí ich skutočný potenciál. Zisťujeme, či by podnikatelia ocenili nástroje, ktoré rutinnú prácu zautomatizujú a ušetria im čas. Ak by to využila aj tvoja firma, tvoj záujem nám ukáže, že má zmysel ich vytvoriť."
   },
   "fact-checking": {
     name: "Fact-checking",
     color: "#00E5FF",
-    title: "Dôveryhodnosť sa buduje dlho. Stratiť ju môžete okamžite.",
-    lead: "V záplave správ, nepresností a zavádzajúcich tvrdení nie je vždy jednoduché rozoznať fakty od dezinformácií.",
+    title: "Dôveru budujeme roky. Jedna falošná informácia ju vie zničiť za chvíľu.",
+    lead: "V záplave správ a zavádzajúcich tvrdení je čoraz ťažšie rozoznať fakty od dezinformácií. My ti to chceme uľahčiť.",
     perks: [
-      "Overíte si pravdivosť správ na základe reálnych dát v reálnom čase.",
-      "Ušetríte svoj čas a minimalizujete riziko zbytočných chýb.",
-      "Získate pomoc pri rozhodovaní sa na základe faktov, nie domnienok."
+      "Pravdivosť správ si overíš na základe reálnych dát, a to hneď.",
+      "Ušetríš čas a vyhneš sa zbytočným chybám.",
+      "Rozhodovať sa budeš na základe faktov, nie domnienok."
     ],
-    about: "SPOI Fact-checking je vo fáze overovania dopytu po platforme, ktorá pomôže ľuďom overovať informácie rýchlo a v reálnom čase. Naším cieľom je poskytnúť spoľahlivý nástroj na boj so zavádzajúcimi tvrdeniami, pretože orientácia v dnešnej obrovskej záplave nepresností je mimoriadne zložitá. Zisťujeme, či má verejnosť reálny záujem o službu, ktorá by umožnila bezpečne sa rozhodovať na základe overených faktov a dát."
+    about: "SPOI Fact-checking má byť platforma, ktorá ti pomôže overiť informácie rýchlo a v reálnom čase. V obrovskom množstve nepresných a zavádzajúcich tvrdení je orientácia mimoriadne náročná. Preto zisťujeme, či by o spoľahlivý nástroj na overovanie faktov mal záujem aj ty. Ak áno, pomôžeš nám rozhodnúť, či ho spustíme."
   },
   financie: {
     name: "Financie",
     color: "#FFD700",
-    title: "Majte svoje peniaze pod kontrolou.",
-    lead: "Či spravujete rodinný rozpočet, e-shop, firmu alebo vlastné investície, je dôležité vedieť, kam vaše peniaze smerujú.",
+    title: "Vieš presne, kam idú tvoje peniaze?",
+    lead: "Či riešiš rodinný rozpočet, e-shop, firmu alebo vlastné investície, kto má prehľad o peniazoch, rozhoduje lepšie.",
     perks: [
-      "Predvídanie finančných zmien a zistenie vplyvu zdražovania na váš rozpočet.",
-      "Odhaľovanie zbytočných výdavkov a nachádzanie miest, kde môžete ušetriť.",
-      "Rýchle finančné odporúčania bez zdĺhavého hľadania informácií."
+      "Predvídaj zmeny a zisti, ako sa zdražovanie dotkne tvojho rozpočtu.",
+      "Odhaľ zbytočné výdavky a nájdi miesta, kde môžeš ušetriť.",
+      "Získaj rýchle finančné odporúčania bez zdĺhavého hľadania informácií."
     ],
-    about: "V rámci SPOI Financie aktuálne overujeme dopyt po platforme, ktorá uľahčí správu vašich peňazí a výdavkov. Cieľom je pomáhať predvídať finančné zmeny a získať rýchle odporúčania, pretože zdĺhavé hľadanie informácií a nákladné konzultácie často odrádzajú ľudí od efektívneho riadenia rozpočtu. Validujeme záujem o systém, vďaka ktorému ľahko odhalíte zbytočné výdavky a budete presne vedieť, čo vás po finančnej stránke čaká."
+    about: "SPOI Financie má uľahčiť správu peňazí a výdavkov: predvídať finančné zmeny, odhaliť zbytočné výdavky a dať ti rýchle odporúčania. Hľadanie informácií je zdĺhavé a konzultácie drahé, takže mnohí ľudia radšej rozpočet neriešia. Zisťujeme, či by ti pomohol systém, vďaka ktorému budeš presne vedieť, čo ťa po finančnej stránke čaká."
   }
 };
 
@@ -442,7 +442,7 @@ $("form-email").addEventListener("submit", async e => {
       await fetch(CONFIG.FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email,section:key,consent:true,ts:new Date().toISOString()})});
     }catch(_){}
   }
-  btn.disabled = false; btn.textContent = "Získať prednostný prístup →";
+  btn.disabled = false; btn.textContent = "Chcem prednostný prístup →";
   go("view-payment");
 });
 
