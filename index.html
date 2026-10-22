@@ -134,7 +134,8 @@ input[type=email]:focus {
 
 .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 0.8rem; color: var(--muted); text-align: left; line-height: 1.4; }
 .consent input { margin-top: 2px; accent-color: var(--accent); width: 16px; height: 16px; flex: none; cursor: pointer; }
-.consent a { color: var(--muted); text-decoration: underline; }
+.link-text { background: none; border: none; color: var(--muted); text-decoration: underline; font: inherit; cursor: pointer; padding: 0; }
+.link-text:hover { color: var(--accent); }
 
 .btn {
   display: inline-flex;
@@ -238,7 +239,7 @@ input[type=email]:focus {
 }
 .foot button:hover { color: var(--accent); }
 
-.about p { color: #CAD0DB; margin-bottom: 14px; font-size: 0.95rem; line-height: 1.6; text-align: left; }
+.about p { color: #CAD0DB; margin-bottom: 16px; font-size: 0.95rem; line-height: 1.65; text-align: left; }
 .about .status {
   padding: 14px 16px;
   border-radius: 14px;
@@ -250,6 +251,10 @@ input[type=email]:focus {
   text-align: left;
   line-height: 1.5;
 }
+
+.privacy-content { text-align: left; font-size: 0.92rem; color: #CAD0DB; line-height: 1.6; margin-bottom: 24px; }
+.privacy-content h3 { color: var(--text); font-size: 1rem; margin: 20px 0 6px; font-weight: 700; }
+.privacy-content p { margin-bottom: 10px; }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 @media (max-width: 420px) { .card { padding: 28px 20px 22px; } h1 { font-size: 1.45rem; } }
@@ -274,7 +279,7 @@ input[type=email]:focus {
       <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="tvoj@email.sk" required>
       <label class="consent">
         <input type="checkbox" id="consent" required>
-        <span>Súhlasím so spracovaním e-mailu na účely informovania o projekte. Odhlásiť sa môžem kedykoľvek. <a href="/ochrana-udajov" target="_blank" rel="noopener">Ochrana údajov</a></span>
+        <span>Súhlasím so spracovaním e-mailu na účely informovania o projekte. Odhlásiť sa môžem kedykoľvek. <button type="button" class="link-text" data-go="view-privacy">Ochrana údajov</button></span>
       </label>
       <p class="err" id="err" role="alert"></p>
       <button class="btn" type="submit" id="btn-email">Chcem prednostný prístup →</button>
@@ -318,9 +323,31 @@ input[type=email]:focus {
   <section id="view-about" class="view about" aria-labelledby="h-about">
     <div class="top"><span class="brand">SPOI<b>.</b></span><span class="pill" id="pill-about"></span></div>
     <h1 id="h-about"></h1>
-    <p id="about-text"></p>
+    <div id="about-text"></div>
     <div class="status">📌 <strong>Na rovinu:</strong> SPOI je zatiaľ vo fáze overovania záujmu. Nechceme stavať naslepo, preto sa najprv pýtame teba. Ak projekt v regióne nezíska dostatočnú podporu, nenaštartuje a každý zaplatený 1 € vrátime v plnej výške.</div>
-    <button class="btn ghost" type="button" id="btn-back">← Späť na registráciu</button>
+    <button class="btn ghost btn-back" type="button">← Späť na registráciu</button>
+  </section>
+  
+  <!-- 5: OCHRANA ÚDAJOV (Nové okno) -->
+  <section id="view-privacy" class="view about" aria-labelledby="h-privacy">
+    <div class="top"><span class="brand">SPOI<b>.</b></span><span class="pill">Ochrana údajov</span></div>
+    <h1 id="h-privacy">Ochrana osobných údajov (GDPR)</h1>
+    <div class="privacy-content">
+      <p>Vaše súkromie berieme vážne. Zadaním e-mailovej adresy súhlasíte s jej spracovaním pre účely komunikácie týkajúcej sa štartu a vývoja projektu SPOI.</p>
+      
+      <h3>1. Aké údaje zbierame?</h3>
+      <p>Spracúvame výhradne vami zadanú e-mailovú adresu v registračnom formulári.</p>
+      
+      <h3>2. Za akým účelom?</h3>
+      <p>E-mail využijeme výlučne na zaslanie potvrdenia o registrácii, informovanie o prednostnom prístupe a informovanie o finálnom spustení prvej verzie projektu. Žiadny spam.</p>
+      
+      <h3>3. Ako dlho údaje uchovávame?</h3>
+      <p>Údaje uchovávame počas fázy overovania dopytu projektu, najviac však 12 mesiacov, prípadne do momentu, kedy svoj súhlas priamo odvoláte.</p>
+      
+      <h3>4. Vaše práva</h3>
+      <p>Kedykoľvek máte právo požiadať o vymazanie vašej e-mailovej adresy z našej databázy, jej opravu, alebo obmedzenie spracovania. Ak máte akékoľvek otázky, stačí nás kontaktovať na e-mailovej adrese <strong>info.spoi.eu@gmail.com</strong>.</p>
+    </div>
+    <button class="btn ghost btn-back" type="button">← Späť</button>
   </section>
 
 </main>
@@ -328,8 +355,8 @@ input[type=email]:focus {
 <script>
 // ====== NASTAVENIA ======
 const CONFIG = {
-  FORM_ENDPOINT: "https://formspree.io/f/xnpjyzkp", // Napr. Formspree / Make / Vlastné API
-  PAYMENT_URL: "https://buy.stripe.com/fZu7sKb6w2Ccc2o6JC9oc00"    // Napr. Stripe Payment Link: https://buy.stripe.com/...
+  FORM_ENDPOINT: "https://formspree.io/f/xnpjyzkp",
+  PAYMENT_URL: "https://buy.stripe.com/fZu7sKb6w2Ccc2o6JC9oc00"
 };
 
 const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 9.5"/></svg>';
@@ -345,7 +372,7 @@ const sections = {
       "Od behu a fitka až po kávu alebo prechádzku.",
       "Aj spontánny nápad sa môže zmeniť na plán a nových ľudí spoznáš úplne prirodzene."
     ],
-    about: "SPOI Spájanie má pomôcť nájsť parťákov na voľný čas, na túru, tréning, kávu či prechádzku. Nekonečné dopisovanie málokedy skončí skutočným stretnutím a spontánny program sa dohodnúť len ťažko. Preto zisťujeme, či by ti pomohla služba, kde jednoducho vyberieš, čo chceš robiť a kedy máš čas, a my ti pomôžeme nájsť ľudí v okolí. Tvoj záujem nám ukáže, či má zmysel ju postaviť. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com"
+    about: "<p>SPOI Spájanie má pomôcť nájsť parťákov na voľný čas, na túru, tréning, kávu či prechádzku.</p><p>Nekonečné dopisovanie málokedy skončí skutočným stretnutím a spontánny program sa dohodnúť len ťažko. Preto zisťujeme, či by ti pomohla služba, kde jednoducho vyberieš, čo chceš robiť a kedy máš čas, a my ti pomôžeme nájsť ľudí v okolí.</p><p>Tvoj záujem nám ukáže, či má zmysel ju postaviť. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com</p>"
   },
   kyberbezpecnost: {
     name: "Kyberbezpečnosť",
@@ -357,7 +384,7 @@ const sections = {
       "Svoje peniaze, heslá a osobné údaje ochrániš pred zneužitím.",
       "Online sa budeš cítiť bezpečnejšie, aj bez technických znalostí."
     ],
-    about: "SPOI Kyberbezpečnosť má byť jednoduchý a dostupný nástroj, ktorý ťa včas upozorní na podozrivé správy a online hrozby. Dnešné podvody sú také vyladené, že ich bežný človek len ťažko odhalí. Zisťujeme, či o takúto ochranu stoja ľudia aj firmy, a to bez zbytočných technických komplikácií. Tvoj záujem nám pomôže rozhodnúť, či ju spustíme. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com"
+    about: "<p>SPOI Kyberbezpečnosť má byť jednoduchý a dostupný nástroj, ktorý ťa včas upozorní na podozrivé správy a online hrozby.</p><p>Dnešné podvody sú také vyladené, že ich bežný človek len ťažko odhalí. Zisťujeme, či o takúto ochranu stoja ľudia aj firmy, a to bez zbytočných technických komplikácií.</p><p>Tvoj záujem nám pomôže rozhodnúť, či ju spustíme. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com</p>"
   },
   biznis: {
     name: "Biznis",
@@ -369,7 +396,7 @@ const sections = {
       "Automatizácia procesov, ktorá ti pomôže získať viac zákazníkov.",
       "Rozhoduj rýchlejšie a presnejšie, na základe dát a nie odhadov."
     ],
-    about: "SPOI Biznis má pomáhať menším aj väčším firmám rásť bez zbytočných nákladov: zrýchliť predaj, zlepšiť rozhodovanie a zbaviť sa rutiny, ktorá brzdí ich skutočný potenciál. Zisťujeme, či by podnikatelia ocenili nástroje, ktoré rutinnú prácu zautomatizujú a ušetria im čas. Ak by to využila aj tvoja firma, tvoj záujem nám ukáže, že má zmysel ich vytvoriť. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com"
+    about: "<p>SPOI Biznis má pomáhať menším aj väčším firmám rásť bez zbytočných nákladov: zrýchliť predaj, zlepšiť rozhodovanie a zbaviť sa rutiny, ktorá brzdí ich skutočný potenciál.</p><p>Zisťujeme, či by podnikatelia ocenili nástroje, ktoré rutinnú prácu zautomatizujú a ušetria im čas.</p><p>Ak by to využila aj tvoja firma, tvoj záujem nám ukáže, že má zmysel ich vytvoriť. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com</p>"
   },
   "fact-checking": {
     name: "Fact-checking",
@@ -381,7 +408,7 @@ const sections = {
       "Ušetríš čas a vyhneš sa zbytočným chybám.",
       "Rozhodovať sa budeš na základe faktov, nie domnienok."
     ],
-    about: "SPOI Fact-checking má byť platforma, ktorá ti pomôže overiť informácie rýchlo a v reálnom čase. V obrovskom množstve nepresných a zavádzajúcich tvrdení je orientácia mimoriadne náročná. Preto zisťujeme, či by o spoľahlivý nástroj na overovanie faktov mal záujem aj ty. Ak áno, pomôžeš nám rozhodnúť, či ho spustíme. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com"
+    about: "<p>SPOI Fact-checking má byť platforma, ktorá ti pomôže overiť informácie rýchlo a v reálnom čase.</p><p>V obrovskom množstve nepresných a zavádzajúcich tvrdení je orientácia mimoriadne náročná. Preto zisťujeme, či by o spoľahlivý nástroj na overovanie faktov mal záujem aj ty.</p><p>Ak áno, pomôžeš nám rozhodnúť, či ho spustíme. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com</p>"
   },
   financie: {
     name: "Financie",
@@ -393,7 +420,7 @@ const sections = {
       "Odhaľ zbytočné výdavky a nájdi miesta, kde môžeš ušetriť.",
       "Získaj rýchle finančné odporúčania bez zdĺhavého hľadania informácií."
     ],
-    about: "SPOI Financie má uľahčiť správu peňazí a výdavkov: predvídať finančné zmeny, odhaliť zbytočné výdavky a dať ti rýchle odporúčania. Hľadanie informácií je zdĺhavé a konzultácie drahé, takže mnohí ľudia radšej rozpočet neriešia. Zisťujeme, či by ti pomohol systém, vďaka ktorému budeš presne vedieť, čo ťa po finančnej stránke čaká. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com"
+    about: "<p>SPOI Financie má uľahčiť správu peňazí a výdavkov: predvídať finančné zmeny, odhaliť zbytočné výdavky a dať ti rýchle odporúčania.</p><p>Hľadanie informácií je zdĺhavé a konzultácie drahé, takže mnohí ľudia radšej rozpočet neriešia.</p><p>Zisťujeme, či by ti pomohol systém, vďaka ktorému budeš presne vedieť, čo ťa po finančnej stránke čaká. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com</p>"
   }
 };
 
@@ -413,20 +440,24 @@ function initSection(){
   $("lead-email").textContent = current.lead;
   $("perks").innerHTML = current.perks.map(p => "<li>" + CHECK + "<span>" + p + "</span></li>").join("");
   $("h-about").textContent = "O projekte SPOI: " + current.name;
-  $("about-text").textContent = current.about;
+  $("about-text").innerHTML = current.about;
 }
 
 let last = "view-email";
 function go(id){
   const active = document.querySelector(".view.active");
-  if(active && active.id !== "view-about") last = active.id;
+  if(active && active.id !== "view-about" && active.id !== "view-privacy") last = active.id;
   document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
   $(id).classList.add("active");
   window.scrollTo({top:0});
 }
 
-document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => go(b.dataset.go)));
-$("btn-back").addEventListener("click", () => go(last));
+document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", (e) => {
+  e.preventDefault();
+  go(b.dataset.go);
+}));
+
+document.querySelectorAll(".btn-back").forEach(b => b.addEventListener("click", () => go(last)));
 
 $("form-email").addEventListener("submit", async e => {
   e.preventDefault();
