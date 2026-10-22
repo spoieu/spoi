@@ -110,6 +110,8 @@ h1 {
 .perks li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.93rem; color: #E2E8F0; line-height: 1.45; }
 .perks svg { flex: none; width: 20px; height: 20px; margin-top: 1px; color: var(--accent); }
 
+.cta-email { font-size: 0.95rem; margin-bottom: 14px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
 form { display: grid; gap: 12px; }
 label.sr { position: absolute; left: -9999px; }
 input[type=email] {
@@ -264,6 +266,9 @@ input[type=email]:focus {
     <h1 id="h-email"></h1>
     <p class="lead" id="lead-email"></p>
     <ul class="perks" id="perks"></ul>
+    
+    <p class="cta-email">Zanechaj nám svoj e-mail a zabezpeč si prednostný prístup k prvej verzii projektu hneď po jeho spustení.</p>
+    
     <form id="form-email" novalidate>
       <label class="sr" for="email">E-mailová adresa</label>
       <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="tvoj@email.sk" required>
@@ -388,7 +393,7 @@ const sections = {
       "Odhaľovanie zbytočných výdavkov a nachádzanie miest, kde môžete ušetriť.",
       "Rýchle finančné odporúčania bez zdĺhavého hľadania informácií."
     ],
-    about: "V rámci SPOI Financie aktuálne overujeme dopyt po platforme, ktorá uľahčí správu vašich peňazí a výdavkov. Cieľom je pomôcť vám predvídať finančné zmeny a získať rýchle odporúčania, pretože zdĺhavé hľadanie informácií a nákladné konzultácie často odrádzajú ľudí od efektívneho riadenia rozpočtu. Validujeme záujem o systém, vďaka ktorému ľahko odhalíte zbytočné výdavky a budete presne vedieť, čo vás po finančnej stránke čaká."
+    about: "V rámci SPOI Financie aktuálne overujeme dopyt po platforme, ktorá uľahčí správu vašich peňazí a výdavkov. Cieľom je pomáhať predvídať finančné zmeny a získať rýchle odporúčania, pretože zdĺhavé hľadanie informácií a nákladné konzultácie často odrádzajú ľudí od efektívneho riadenia rozpočtu. Validujeme záujem o systém, vďaka ktorému ľahko odhalíte zbytočné výdavky a budete presne vedieť, čo vás po finančnej stránke čaká."
   }
 };
 
