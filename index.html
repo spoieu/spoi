@@ -134,8 +134,8 @@ input[type=email]:focus {
 
 .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 0.8rem; color: var(--muted); text-align: left; line-height: 1.4; }
 .consent input { margin-top: 2px; accent-color: var(--accent); width: 16px; height: 16px; flex: none; cursor: pointer; }
-.link-text { background: none; border: none; color: var(--muted); text-decoration: underline; font: inherit; cursor: pointer; padding: 0; }
-.link-text:hover { color: var(--accent); }
+.consent a { color: var(--muted); text-decoration: underline; transition: color 0.2s; }
+.consent a:hover { color: var(--accent); }
 
 .btn {
   display: inline-flex;
@@ -240,6 +240,7 @@ input[type=email]:focus {
 .foot button:hover { color: var(--accent); }
 
 .about p { color: #CAD0DB; margin-bottom: 16px; font-size: 0.95rem; line-height: 1.65; text-align: left; }
+.about p strong { color: var(--text); }
 .about .status {
   padding: 14px 16px;
   border-radius: 14px;
@@ -279,7 +280,7 @@ input[type=email]:focus {
       <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="tvoj@email.sk" required>
       <label class="consent">
         <input type="checkbox" id="consent" required>
-        <span>Súhlasím so spracovaním e-mailu na účely informovania o projekte. Odhlásiť sa môžem kedykoľvek. <button type="button" class="link-text" data-go="view-privacy">Ochrana údajov</button></span>
+        <span>Súhlasím so spracovaním e-mailu na účely informovania o projekte. Odhlásiť sa môžem kedykoľvek. <a href="#" data-go="view-privacy">Ochrana údajov</a></span>
       </label>
       <p class="err" id="err" role="alert"></p>
       <button class="btn" type="submit" id="btn-email">Chcem prednostný prístup →</button>
@@ -328,7 +329,7 @@ input[type=email]:focus {
     <button class="btn ghost btn-back" type="button">← Späť na registráciu</button>
   </section>
   
-  <!-- 5: OCHRANA ÚDAJOV (Nové okno) -->
+  <!-- 5: OCHRANA ÚDAJOV (Nové okno priamo v kóde) -->
   <section id="view-privacy" class="view about" aria-labelledby="h-privacy">
     <div class="top"><span class="brand">SPOI<b>.</b></span><span class="pill">Ochrana údajov</span></div>
     <h1 id="h-privacy">Ochrana osobných údajov (GDPR)</h1>
@@ -372,7 +373,7 @@ const sections = {
       "Od behu a fitka až po kávu alebo prechádzku.",
       "Aj spontánny nápad sa môže zmeniť na plán a nových ľudí spoznáš úplne prirodzene."
     ],
-    about: "<p>SPOI Spájanie má pomôcť nájsť parťákov na voľný čas, na túru, tréning, kávu či prechádzku.</p><p>Nekonečné dopisovanie málokedy skončí skutočným stretnutím a spontánny program sa dohodnúť len ťažko. Preto zisťujeme, či by ti pomohla služba, kde jednoducho vyberieš, čo chceš robiť a kedy máš čas, a my ti pomôžeme nájsť ľudí v okolí.</p><p>Tvoj záujem nám ukáže, či má zmysel ju postaviť. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com</p>"
+    about: "<p>SPOI Spájanie má pomôcť nájsť parťákov na voľný čas, na túru, tréning, kávu či prechádzku.</p><p>Nekonečné dopisovanie málokedy skončí skutočným stretnutím a spontánny program sa dohodnúť len ťažko. Preto zisťujeme, či by ti pomohla služba, kde jednoducho vyberieš, čo chceš robiť a kedy máš čas, a my ti pomôžeme nájsť ľudí v okolí.</p><p>Tvoj záujem nám ukáže, či má zmysel ju postaviť.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
   },
   kyberbezpecnost: {
     name: "Kyberbezpečnosť",
@@ -384,7 +385,7 @@ const sections = {
       "Svoje peniaze, heslá a osobné údaje ochrániš pred zneužitím.",
       "Online sa budeš cítiť bezpečnejšie, aj bez technických znalostí."
     ],
-    about: "<p>SPOI Kyberbezpečnosť má byť jednoduchý a dostupný nástroj, ktorý ťa včas upozorní na podozrivé správy a online hrozby.</p><p>Dnešné podvody sú také vyladené, že ich bežný človek len ťažko odhalí. Zisťujeme, či o takúto ochranu stoja ľudia aj firmy, a to bez zbytočných technických komplikácií.</p><p>Tvoj záujem nám pomôže rozhodnúť, či ju spustíme. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com</p>"
+    about: "<p>SPOI Kyberbezpečnosť má byť jednoduchý a dostupný nástroj, ktorý ťa včas upozorní na podozrivé správy a online hrozby.</p><p>Dnešné podvody sú také vyladené, že ich bežný človek len ťažko odhalí. Zisťujeme, či o takúto ochranu stoja ľudia aj firmy, a to bez zbytočných technických komplikácií.</p><p>Tvoj záujem nám pomôže rozhodnúť, či ju spustíme.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
   },
   biznis: {
     name: "Biznis",
@@ -396,7 +397,7 @@ const sections = {
       "Automatizácia procesov, ktorá ti pomôže získať viac zákazníkov.",
       "Rozhoduj rýchlejšie a presnejšie, na základe dát a nie odhadov."
     ],
-    about: "<p>SPOI Biznis má pomáhať menším aj väčším firmám rásť bez zbytočných nákladov: zrýchliť predaj, zlepšiť rozhodovanie a zbaviť sa rutiny, ktorá brzdí ich skutočný potenciál.</p><p>Zisťujeme, či by podnikatelia ocenili nástroje, ktoré rutinnú prácu zautomatizujú a ušetria im čas.</p><p>Ak by to využila aj tvoja firma, tvoj záujem nám ukáže, že má zmysel ich vytvoriť. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com</p>"
+    about: "<p>SPOI Biznis má pomáhať menším aj väčším firmám rásť bez zbytočných nákladov: zrýchliť predaj, zlepšiť rozhodovanie a zbaviť sa rutiny, ktorá brzdí ich skutočný potenciál.</p><p>Zisťujeme, či by podnikatelia ocenili nástroje, ktoré rutinnú prácu zautomatizujú a ušetria im čas.</p><p>Ak by to využila aj tvoja firma, tvoj záujem nám ukáže, že má zmysel ich vytvoriť.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
   },
   "fact-checking": {
     name: "Fact-checking",
@@ -408,7 +409,7 @@ const sections = {
       "Ušetríš čas a vyhneš sa zbytočným chybám.",
       "Rozhodovať sa budeš na základe faktov, nie domnienok."
     ],
-    about: "<p>SPOI Fact-checking má byť platforma, ktorá ti pomôže overiť informácie rýchlo a v reálnom čase.</p><p>V obrovskom množstve nepresných a zavádzajúcich tvrdení je orientácia mimoriadne náročná. Preto zisťujeme, či by o spoľahlivý nástroj na overovanie faktov mal záujem aj ty.</p><p>Ak áno, pomôžeš nám rozhodnúť, či ho spustíme. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com</p>"
+    about: "<p>SPOI Fact-checking má byť platforma, ktorá ti pomôže overiť informácie rýchlo a v reálnom čase.</p><p>V obrovskom množstve nepresných a zavádzajúcich tvrdení je orientácia mimoriadne náročná. Preto zisťujeme, či by o spoľahlivý nástroj na overovanie faktov mal záujem aj ty.</p><p>Ak áno, pomôžeš nám rozhodnúť, či ho spustíme.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
   },
   financie: {
     name: "Financie",
@@ -420,7 +421,7 @@ const sections = {
       "Odhaľ zbytočné výdavky a nájdi miesta, kde môžeš ušetriť.",
       "Získaj rýchle finančné odporúčania bez zdĺhavého hľadania informácií."
     ],
-    about: "<p>SPOI Financie má uľahčiť správu peňazí a výdavkov: predvídať finančné zmeny, odhaliť zbytočné výdavky a dať ti rýchle odporúčania.</p><p>Hľadanie informácií je zdĺhavé a konzultácie drahé, takže mnohí ľudia radšej rozpočet neriešia.</p><p>Zisťujeme, či by ti pomohol systém, vďaka ktorému budeš presne vedieť, čo ťa po finančnej stránke čaká. V prípade akýchkoľvek otázok nás kontaktuj na e-mail: info.spoi.eu@gmail.com</p>"
+    about: "<p>SPOI Financie má uľahčiť správu peňazí a výdavkov: predvídať finančné zmeny, odhaliť zbytočné výdavky a dať ti rýchle odporúčania.</p><p>Hľadanie informácií je zdĺhavé a konzultácie drahé, takže mnohí ľudia radšej rozpočet neriešia.</p><p>Zisťujeme, či by ti pomohol systém, vďaka ktorému budeš presne vedieť, čo ťa po finančnej stránke čaká.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
   }
 };
 
@@ -454,6 +455,7 @@ function go(id){
 
 document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", (e) => {
   e.preventDefault();
+  e.stopPropagation(); // Zabráni prekliknutiu checkboxu, keď sa klikne na link
   go(b.dataset.go);
 }));
 
