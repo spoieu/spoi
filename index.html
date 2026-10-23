@@ -267,7 +267,7 @@ input[type=email]:focus {
 
   <!-- 1: E-MAIL -->
   <section id="view-email" class="view active" aria-labelledby="h-email">
-    <div class="top"><span class="brand">SPOI<b>.</b></span><span class="pill" id="pill-email"></span></div>
+    <div class="top"><span class="brand">SPOI<b>.</b></span></div>
     <div class="steps" aria-hidden="true"><i class="on"></i><i></i></div>
     <h1 id="h-email"></h1>
     <p class="lead" id="lead-email"></p>
@@ -291,14 +291,14 @@ input[type=email]:focus {
 
   <!-- 2: PLATBA -->
   <section id="view-payment" class="view" aria-labelledby="h-pay">
-    <div class="top"><span class="brand">SPOI<b>.</b></span><span class="pill" id="pill-pay"></span></div>
+    <div class="top"><span class="brand">SPOI<b>.</b></span></div>
     <div class="steps" aria-hidden="true"><i class="on"></i><i class="on"></i></div>
     <h1 id="h-pay">Zaisti si miesto medzi zakladajúcimi členmi</h1>
     <p class="lead">Za <strong>1 €</strong> si rezervuješ svoje miesto a zároveň nám ukážeš, že o projekt je reálny záujem. Ak nenaštartuje, peniaze ti vrátime.</p>
     <div class="price"><b>1 €</b><span>jednorazovo · bez skrytých poplatkov</span></div>
     <div class="guarantee">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
-      <span><strong>Nič neriskuješ: 100 % vrátenie platby.</strong> Ak projekt nenaštartuje do 7 dní od uzavretia registrácie, 1 € ti automaticky vrátime na tvoj účet.</span>
+      <span><strong>Nič neriskuješ: 100 % vrátenie platby.</strong> Ak projekt nenaštartuje do 14 dní od uzavretia registrácie, 1 € ti automaticky vrátime na tvoj účet.</span>
     </div>
     <button class="btn" id="btn-pay" type="button">Rezervovať miesto za 1 €</button>
     <p class="micro">Bezpečná platba cez šifrovanú platobnú bránu.</p>
@@ -313,7 +313,7 @@ input[type=email]:focus {
     <ol class="next">
       <li>Pozri si schránku (aj zložku SPAM). Potvrdenie príde do pár minút.</li>
       <li>Ako jeden z prvých sa dozvieš, kedy projekt štartuje.</li>
-      <li>Ak projekt nenaštartuje do 7 dní od uzavretia registrácie, 1 € ti automaticky vrátime.</li>
+      <li>Ak projekt nenaštartuje do 14 dní od uzavretia registrácie, 1 € ti automaticky vrátime.</li>
     </ol>
     <button class="btn" id="btn-share" type="button">Pozvať priateľa</button>
     <p class="micro" id="share-msg">Čím skôr sa naplní kapacita, tým skôr projekt spustíme.</p>
@@ -322,16 +322,16 @@ input[type=email]:focus {
 
   <!-- 4: O NÁS -->
   <section id="view-about" class="view about" aria-labelledby="h-about">
-    <div class="top"><span class="brand">SPOI<b>.</b></span><span class="pill" id="pill-about"></span></div>
+    <div class="top"><span class="brand">SPOI<b>.</b></span></div>
     <h1 id="h-about"></h1>
     <div id="about-text"></div>
     <div class="status">📌 <strong>Na rovinu:</strong> SPOI je zatiaľ vo fáze overovania záujmu. Nechceme stavať naslepo, preto sa najprv pýtame teba. Ak projekt v regióne nezíska dostatočnú podporu, nenaštartuje a každý zaplatený 1 € vrátime v plnej výške.</div>
     <button class="btn ghost btn-back" type="button">← Späť na registráciu</button>
   </section>
   
-  <!-- 5: OCHRANA ÚDAJOV (Nové okno priamo v kóde) -->
+  <!-- 5: OCHRANA ÚDAJOV -->
   <section id="view-privacy" class="view about" aria-labelledby="h-privacy">
-    <div class="top"><span class="brand">SPOI<b>.</b></span><span class="pill">Ochrana údajov</span></div>
+    <div class="top"><span class="brand">SPOI<b>.</b></span></div>
     <h1 id="h-privacy">Ochrana osobných údajov (GDPR)</h1>
     <div class="privacy-content">
       <p>Vaše súkromie berieme vážne. Zadaním e-mailovej adresy súhlasíte s jej spracovaním pre účely komunikácie týkajúcej sa štartu a vývoja projektu SPOI.</p>
@@ -373,7 +373,7 @@ const sections = {
       "Od behu a fitka až po kávu alebo prechádzku.",
       "Aj spontánny nápad sa môže zmeniť na plán a nových ľudí spoznáš úplne prirodzene."
     ],
-    about: "<p>SPOI Spájanie má pomôcť nájsť parťákov na voľný čas, na túru, tréning, kávu či prechádzku.</p><p>Nekonečné dopisovanie málokedy skončí skutočným stretnutím a spontánny program sa dohodnúť len ťažko. Preto zisťujeme, či by ti pomohla služba, kde jednoducho vyberieš, čo chceš robiť a kedy máš čas, a my ti pomôžeme nájsť ľudí v okolí.</p><p>Tvoj záujem nám ukáže, či má zmysel ju postaviť.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
+    about: "<p>Spájanie má pomôcť nájsť parťákov na voľný čas, na túru, tréning, kávu či prechádzku.</p><p>Nekonečné dopisovanie málokedy skončí skutočným stretnutím a spontánny program sa dohodnúť len ťažko. Preto zisťujeme, či by ti pomohla služba, kde jednoducho vyberieš, čo chceš robiť a kedy máš čas, a my ti pomôžeme nájsť ľudí v okolí.</p><p>Tvoj záujem nám ukáže, či má zmysel ju postaviť.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
   },
   kyberbezpecnost: {
     name: "Kyberbezpečnosť",
@@ -385,7 +385,7 @@ const sections = {
       "Svoje peniaze, heslá a osobné údaje ochrániš pred zneužitím.",
       "Online sa budeš cítiť bezpečnejšie, aj bez technických znalostí."
     ],
-    about: "<p>SPOI Kyberbezpečnosť má byť jednoduchý a dostupný nástroj, ktorý ťa včas upozorní na podozrivé správy a online hrozby.</p><p>Dnešné podvody sú také vyladené, že ich bežný človek len ťažko odhalí. Zisťujeme, či o takúto ochranu stoja ľudia aj firmy, a to bez zbytočných technických komplikácií.</p><p>Tvoj záujem nám pomôže rozhodnúť, či ju spustíme.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
+    about: "<p>Kyberbezpečnosť má byť jednoduchý a dostupný nástroj, ktorý ťa včas upozorní na podozrivé správy a online hrozby.</p><p>Dnešné podvody sú také vyladené, že ich bežný človek len ťažko odhalí. Zisťujeme, či o takúto ochranu stoja ľudia aj firmy, a to bez zbytočných technických komplikácií.</p><p>Tvoj záujem nám pomôže rozhodnúť, či ju spustíme.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
   },
   biznis: {
     name: "Biznis",
@@ -397,7 +397,7 @@ const sections = {
       "Automatizácia procesov, ktorá ti pomôže získať viac zákazníkov.",
       "Rozhoduj rýchlejšie a presnejšie, na základe dát a nie odhadov."
     ],
-    about: "<p>SPOI Biznis má pomáhať menším aj väčším firmám rásť bez zbytočných nákladov: zrýchliť predaj, zlepšiť rozhodovanie a zbaviť sa rutiny, ktorá brzdí ich skutočný potenciál.</p><p>Zisťujeme, či by podnikatelia ocenili nástroje, ktoré rutinnú prácu zautomatizujú a ušetria im čas.</p><p>Ak by to využila aj tvoja firma, tvoj záujem nám ukáže, že má zmysel ich vytvoriť.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
+    about: "<p>Biznis má pomáhať menším aj väčším firmám rásť bez zbytočných nákladov: zrýchliť predaj, zlepšiť rozhodovanie a zbaviť sa rutiny, ktorá brzdí ich skutočný potenciál.</p><p>Zisťujeme, či by podnikatelia ocenili nástroje, ktoré rutinnú prácu zautomatizujú a ušetria im čas.</p><p>Ak by to využila aj tvoja firma, tvoj záujem nám ukáže, že má zmysel ich vytvoriť.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
   },
   "fact-checking": {
     name: "Fact-checking",
@@ -409,7 +409,7 @@ const sections = {
       "Ušetríš čas a vyhneš sa zbytočným chybám.",
       "Rozhodovať sa budeš na základe faktov, nie domnienok."
     ],
-    about: "<p>SPOI Fact-checking má byť platforma, ktorá ti pomôže overiť informácie rýchlo a v reálnom čase.</p><p>V obrovskom množstve nepresných a zavádzajúcich tvrdení je orientácia mimoriadne náročná. Preto zisťujeme, či by o spoľahlivý nástroj na overovanie faktov mal záujem aj ty.</p><p>Ak áno, pomôžeš nám rozhodnúť, či ho spustíme.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
+    about: "<p>Fact-checking má byť platforma, ktorá ti pomôže overiť informácie rýchlo a v reálnom čase.</p><p>V obrovskom množstve nepresných a zavádzajúcich tvrdení je orientácia mimoriadne náročná. Preto zisťujeme, či by o spoľahlivý nástroj na overovanie faktov mal záujem aj ty.</p><p>Ak áno, pomôžeš nám rozhodnúť, či ho spustíme.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
   },
   financie: {
     name: "Financie",
@@ -421,7 +421,7 @@ const sections = {
       "Odhaľ zbytočné výdavky a nájdi miesta, kde môžeš ušetriť.",
       "Získaj rýchle finančné odporúčania bez zdĺhavého hľadania informácií."
     ],
-    about: "<p>SPOI Financie má uľahčiť správu peňazí a výdavkov: predvídať finančné zmeny, odhaliť zbytočné výdavky a dať ti rýchle odporúčania.</p><p>Hľadanie informácií je zdĺhavé a konzultácie drahé, takže mnohí ľudia radšej rozpočet neriešia.</p><p>Zisťujeme, či by ti pomohol systém, vďaka ktorému budeš presne vedieť, čo ťa po finančnej stránke čaká.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
+    about: "<p>Financie má uľahčiť správu peňazí a výdavkov: predvídať finančné zmeny, odhaliť zbytočné výdavky a dať ti rýchle odporúčania.</p><p>Hľadanie informácií je zdĺhavé a konzultácie drahé, takže mnohí ľudia radšej rozpočet neriešia.</p><p>Zisťujeme, či by ti pomohol systém, vďaka ktorému budeš presne vedieť, čo ťa po finančnej stránke čaká.</p><p>V prípade otázok nás kontaktujte na email: <strong>info.spoi.eu@gmail.com</strong></p>"
   }
 };
 
@@ -433,14 +433,11 @@ function initSection(){
   if(!sections[key]) key = "spajanie";
   current = sections[key];
   document.documentElement.style.setProperty("--accent", current.color);
-  const tag = "SPOI · " + current.name;
-  $("pill-email").textContent = tag;
-  $("pill-pay").textContent = "VIP · " + current.name;
-  $("pill-about").textContent = tag;
+  
   $("h-email").textContent = current.title;
   $("lead-email").textContent = current.lead;
   $("perks").innerHTML = current.perks.map(p => "<li>" + CHECK + "<span>" + p + "</span></li>").join("");
-  $("h-about").textContent = "O projekte SPOI: " + current.name;
+  $("h-about").textContent = "O projekte: " + current.name;
   $("about-text").innerHTML = current.about;
 }
 
@@ -504,4 +501,4 @@ window.addEventListener("hashchange", initSection);
 initSection();
 </script>
 </body>
-</html> 
+</html>
